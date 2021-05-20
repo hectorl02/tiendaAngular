@@ -1,2 +1,22 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
+
+<div *ngIf="title === 'hector'">
+  Esto es un div
+</div>
+
+<button (click)="addItem()">add item</button>
+
+<li *ngIf="lista.length===0">lista esta vacia</li>
+<ul *ngFor ="let nombre of lista,index as i">
+  {{ i }}{{ nombre }}
+  <button (click)="deleteItem(i)"> borrar</button>
+</ul>
+
+<div *ngFor="let product of products">
+  {{ product.id}}
+  {{ product.title}}
+  <img [src]="product.image" alt="">
+  {{product.price}}
+
+</div>
