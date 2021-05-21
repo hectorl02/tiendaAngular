@@ -11,6 +11,8 @@ export class AppComponent {
 
   lista=['marco','hector','cristian','lucy'];
 
+  potencia:number=0;
+
   products:Product[]= [
     {
       id: '1',
