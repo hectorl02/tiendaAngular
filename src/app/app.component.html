@@ -13,6 +13,10 @@
   <button (click)="deleteItem(i)"> borrar</button>
 </ul>
 
-<div *ngFor="let product of products">
-  <app-product (productClick)="clickProduct($event)" [product]="product"></app-product>
+<div class="product-grid">
+  <app-product  
+    *ngFor="let product of products"
+    (productClick)="clickProduct($event)" 
+    [product]="product">
+  </app-product>
 </div>
