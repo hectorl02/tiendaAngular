@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
+import { HighLightDirective } from './directives/high-light.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ExponentialPipe
+    ExponentialPipe,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
