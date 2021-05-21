@@ -17,7 +17,7 @@ export class AppComponent {
       image: 'assets/images/camiseta.png',
       title: 'Camiseta',
       price: 80000,
-      description: 'bla bla bla bla bla'
+      description: 'Encuentra en Chevignon camisetas para hombre básicas, de diferentes colores, estampados y estilos. ¡Compra online pago 100% seguros y envíos a todo el ...'
     },
     {
       id: '2',
@@ -64,4 +64,10 @@ export class AppComponent {
   deleteItem(index:number){
     this.lista.splice(index,1);
   }
+
+  clickProduct(id:number){
+    console.log(id);
+  }
+
+
 }
