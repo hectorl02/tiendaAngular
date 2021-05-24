@@ -1,0 +1,18 @@
+<input type="text" [(ngModel)]="title">
+{{ title }}
+
+<input type="text" [(ngModel)]= "potencia">
+{{ potencia | exponential}}
+
+<div *ngIf="title === 'hector'">
+  Esto es un div
+</div>
+
+<button (click)="addItem()">add item</button>
+
+<li *ngIf="lista.length===0">lista esta vacia</li>
+<ul *ngFor ="let nombre of lista,index as i">
+  {{ i }}{{ nombre }}
+  <button (click)="deleteItem(i)"> borrar</button>
+</ul>
+
