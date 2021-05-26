@@ -9,12 +9,14 @@ import Swiper from 'swiper';
 export class HomeComponent implements OnInit, AfterViewInit {
 
   mySwiper: Swiper | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  //cuando elementos hijos ya fueron renderizados
   ngAfterViewInit(){
-    this.mySwiper= new Swiper('.swiper-container');
+    this.mySwiper= new Swiper('.swiper-container');// constructor
   }
 
 }
