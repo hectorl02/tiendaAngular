@@ -3,15 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './contacts/contacts.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  },
 {
   path:'home',
   component:HomeComponent
 },
 {
-  path:'productos',
+  path:'products',
   component:ProductsComponent
 },
 {
@@ -21,6 +27,10 @@ const routes: Routes = [
 {
   path:'demo',
   component:DemoComponent
+},
+{
+  path:'**',
+  component:PageNotFoundComponent
 },
 
 ];
