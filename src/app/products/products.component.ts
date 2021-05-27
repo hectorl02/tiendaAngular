@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product.model';
+
+import { Product } from './../product.model';
 
 @Component({
   selector: 'app-products',
@@ -8,18 +9,13 @@ import { Product } from '../product.model';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  products:Product[]= [
+  products: Product[] = [
     {
       id: '1',
       image: 'assets/images/camiseta.png',
       title: 'Camiseta',
       price: 80000,
-      description: 'Encuentra en Chevignon camisetas para hombre básicas, de diferentes colores, estampados y estilos. ¡Compra online pago 100% seguros y envíos a todo el ...'
+      description: 'bla bla bla bla bla'
     },
     {
       id: '2',
@@ -55,12 +51,17 @@ export class ProductsComponent implements OnInit {
       title: 'Stickers',
       price: 80000,
       description: 'bla bla bla bla bla'
-    }
+    },
   ];
 
-  clickProduct(id:number){
-    console.log(id);
+  constructor() { }
+
+  ngOnInit() {
   }
 
+  clickProduct(id: number) {
+    console.log('product');
+    console.log(id);
+  }
 
 }

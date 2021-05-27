@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
@@ -8,26 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
+  title = 'platzi-store';
 
-  ngOnInit(): void {
+  items = ['nicolas', 'julian', 'perez'];
+
+  objeto = {};
+
+  power = 10;
+
+  ngOnInit() {
+    // code
   }
 
-  title = 'store';
-
-
-  lista=['marco','hector','cristian','lucy'];
-
-  potencia:number=0;
-
-
-  addItem(){
-    this.lista.push('nuevo item')
+  addItem() {
+    this.items.push('nuevo item');
   }
 
-  deleteItem(index:number){
-    this.lista.splice(index,1);
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
   }
+
 
 
 }
